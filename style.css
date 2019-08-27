@@ -1,0 +1,219 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #eee;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 640px;
+}
+
+.card {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  min-height: 21rem;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: -webkit-box-shadow 0.4s linear;
+  transition: -webkit-box-shadow 0.4s linear;
+  transition: box-shadow 0.4s linear;
+  transition: box-shadow 0.4s linear, -webkit-box-shadow 0.4s linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:nth-child(odd) {
+  margin-right: 10px;
+}
+
+.card:nth-child(even) {
+  margin-left: 10px;
+}
+
+.card .image {
+  width: 100%;
+  display: block;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.card .image img {
+  width: 100%;
+}
+
+.card .date {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  border-radius: 100%;
+  background-color: #e74c3c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.card .content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-color: #cecece;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.card .content .tags {
+  padding: 0.5rem;
+  max-width: 5rem;
+  position: absolute;
+  left: -1px;
+  top: -28px;
+  background-color: #e74c3c;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .content h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card .content h2 {
+  font-size: 1.1em;
+  color: #c1747e;
+}
+
+.card .content .text {
+  text-align: justify;
+  color: #70716c;
+  max-height: 0;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  overflow: hidden;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .image {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 0.5;
+}
+
+.card:hover .content .text {
+  margin-top: 30px;
+  max-height: 200px;
+}
+
+.card .infos {
+  margin-top: 30px;
+  color: #9c9d98;
+}
+
+.card .infos span {
+  margin-right: 10px;
+}
+
+.card [class^="flaticon-"]:before,
+.card [class*=" flaticon-"]:before,
+.card [class^="flaticon-"]:after,
+.card [class*=" flaticon-"]:after {
+  margin: 0;
+  font-size: 16px;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    display: inline-block;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body #wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #wrapper .card {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 528px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 358px) {
+  body {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+  .card {
+    min-height: 19rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
